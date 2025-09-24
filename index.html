@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Prajapati Avasaan Nondh Generator</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Gujarati:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>અવસાન નોંધ જનરેટર</h1>
+        <p>Memorial Notice Generator</p>
+      </header>
+
+      <div class="main-content">
+        <div class="form-section">
+          <h2>Enter Details</h2>
+          <form id="memorialForm">
+            <div class="form-group">
+              <label for="title">Title (શીર્ષક):</label>
+              <input type="text" id="title" name="title" value="દુઃખદ અવસાન" />
+            </div>
+
+            <div class="form-group">
+              <label for="prefix">Prefix (ઉપસર્ગ):</label>
+              <input type="text" id="prefix" name="prefix" value="સ્વ." />
+            </div>
+
+            <div class="form-group">
+              <label for="deceasedName">Deceased Name (અવસાન થયેલનું નામ):</label>
+              <input type="text" id="deceasedName" name="deceasedName" required />
+            </div>
+
+            <div class="form-group">
+              <label for="age">Age (વય):</label>
+              <input type="text" id="age" name="age" placeholder="Enter age" required />
+            </div>
+
+            <div class="form-group">
+              <label for="address">Current Address (હાલનું સરનામું):</label>
+              <textarea id="address" name="address" rows="3" required></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="vatanGaam">Gaam - Village (ગામ - ગામ):</label>
+              <input type="text" id="vatanGaam" name="vatanGaam" />
+            </div>
+
+            <div class="form-group">
+              <label for="vatanTaluko">Gaam - Taluka (ગામ - તાલુકો):</label>
+              <input type="text" id="vatanTaluko" name="vatanTaluko" />
+            </div>
+
+            <div class="form-group">
+              <label for="vatanJillo">Gaam - District (ગામ - જિલ્લો):</label>
+              <input type="text" id="vatanJillo" name="vatanJillo" />
+            </div>
+
+            <div class="form-group">
+              <label for="deathDate">Date of Demise (અવસાનની તારીખ):</label>
+              <input type="date" id="deathDate" name="deathDate" required />
+            </div>
+
+            <div class="form-group">
+              <label for="funeralDate">Funeral Date (સ્મશાનયાત્રાની તારીખ):</label>
+              <input type="date" id="funeralDate" name="funeralDate" required />
+            </div>
+
+            <div class="form-group">
+              <label for="funeralTime">Funeral Time (સમય):</label>
+              <input type="time" id="funeralTime" name="funeralTime" required />
+            </div>
+
+            <div class="form-group">
+              <label for="funeralLocation">Funeral Location (સ્થળ):</label>
+              <input type="text" id="funeralLocation" name="funeralLocation" required />
+            </div>
+
+            <div class="form-group">
+              <label for="contactName1">Contact Person 1 (સંપર્ક વ્યક્તિ 1):</label>
+              <input type="text" id="contactName1" name="contactName1" required />
+            </div>
+
+            <div class="form-group">
+              <label for="contactPhone1">Phone Number 1:</label>
+              <input type="tel" id="contactPhone1" name="contactPhone1" required />
+            </div>
+
+            <div class="form-group">
+              <label for="contactName2">Contact Person 2 (સંપર્ક વ્યક્તિ 2):</label>
+              <input type="text" id="contactName2" name="contactName2" />
+            </div>
+
+            <div class="form-group">
+              <label for="contactPhone2">Phone Number 2:</label>
+              <input type="tel" id="contactPhone2" name="contactPhone2" />
+            </div>
+
+            <div class="form-group">
+              <label for="contactName3">Contact Person 3 (સંપર્ક વ્યક્તિ 3):</label>
+              <input type="text" id="contactName3" name="contactName3" />
+            </div>
+
+            <div class="form-group">
+              <label for="contactPhone3">Phone Number 3:</label>
+              <input type="tel" id="contactPhone3" name="contactPhone3" />
+            </div>
+
+            <div class="form-group">
+              <label for="portrait">Upload Portrait (ફોટો અપલોડ કરો):</label>
+              <input type="file" id="portrait" name="portrait" accept="image/*" required />
+            </div>
+
+            <div class="form-group">
+              <label for="shraddhanjaliNote">Shraddhanjali Note (શ્રદ્ધાંજલિ નોંધ):</label>
+              <textarea id="shraddhanjaliNote" name="shraddhanjaliNote" rows="3">
+સદૃગત આત્માને પરમકૃપાળુ પરમાત્મા ચિર:શાંન્તિ અર્પે એવી ભાવપુર્વક શ્રદ્ધાંજલિ</textarea
+              >
+            </div>
+
+            <button type="submit" class="generate-btn">Generate Memorial Notice</button>
+          </form>
+        </div>
+
+        <div class="preview-section">
+          <h2>Live Preview</h2>
+          <p class="preview-note">Preview updates as you type</p>
+          <div class="canvas-container">
+            <canvas id="memorialCanvas" width="900" height="1200"></canvas>
+          </div>
+          <button id="downloadBtn" class="download-btn" style="display: none">
+            Download Image
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
